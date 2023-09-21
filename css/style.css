@@ -297,6 +297,7 @@ header .container .nav-bar{
    line-height:16px;
    font-size:10px;
    display:inline-block;
+   color:var(--title-color);
 }
 .dropdown-item:hover{
     background-color:transparent;

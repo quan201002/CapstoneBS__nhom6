@@ -199,7 +199,7 @@ header .container .nav-bar{
 .moblie-position{
    position:absolute;
    top:12px;
-   right: -20px;
+   right: -25px;
 }
 .navbar-toggler .icon-close{
     display:none;
@@ -233,7 +233,7 @@ header .container .nav-bar{
         margin-bottom:15px;
     }
     .moblie-position{
-        right:45px;
+        right:50px;
     }
     header.header{
         padding:15px 0!important;
@@ -409,7 +409,11 @@ header .container .nav-bar{
     transition:0.3s ease-out;
    
 }
-
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+    color:#dc4f72;
+    background-color:#fff;
+    border-color:#dc4f72;
+}
 .btn.btn-outline-success:hover
 {
     background-color:#dc4f72;
@@ -439,15 +443,13 @@ header .container .nav-bar{
     cursor:pointer;
     background-color:transparent;
     transition:all 0.6s ease 0s;
-   
 }
 .fa-sun{
     display:none;
-    color:#fff;
+    color:var(--text-color);
 }
 .fa-moon{
     display:block;
-    color:#000;
 }
 /* popup */
 .popup{
@@ -591,10 +593,14 @@ header .container .nav-bar{
 .index2 .card h3{
     font-size:26px;
     color: var(--title-color);
+    font-weight:700;
+    line-height:35px;
 }
 .index2 .card p{
-    font-size:15px;
+    font-size:16px;
     color: var(--text-color);
+    line-height:24.5px;
+    margin-top:15px;
 }
 @media (min-width:1280px){
     .container{
@@ -660,21 +666,27 @@ header .container .nav-bar{
 .number-countup .content h3{
     color:var(--title-color);
     font-weight:700;
-    font-size:18px;
+    font-size:16px;
+    line-height:24.5px;
+    text-transform:capitalize;
 }
 .number-countup .content p.counter{
     color:#dc4f72;
-    font-size:40px;
-    line-height:50px;
+    font-size:50px;
+    line-height:1;
     margin-bottom:15px;
     margin-top:10px;
+    font-weight:700;
 }
 .number-countup .content p{
-    color:#5a5a5a;
+    color:var(--text-color);
     margin:0;
     padding:0;
 }
 /* FAQ */
+.FAQ{
+    background-color:var(--light-bg-color);
+}
 .FAQ .image img{
     transition:0.3s ease-in-out;
     border-radius:var(--card-curve);
@@ -796,14 +808,14 @@ header .container .nav-bar{
     padding:15px;
     font-weight:700;
     font-size:22px;
-    display:float;
     float:left;
     width:33.33333%;
     margin:0;
     cursor:pointer;
     list-style:none;
     text-align:center;
-    background:var(--bg-color);
+    color:var(--title-color);
+    background:var(--bg-color)!important;
     border-bottom:3px solid var(--border-color-light);
 }
 .res-tab-active{

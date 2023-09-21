@@ -6,6 +6,16 @@
 html,body{
     font-family: 'Nunito', sans-serif;
 }
+h1,h2,h3,h4,h5,h6{
+    margin-bottom:0;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+p{
+    margin:0;
+}
 :root{
     --primary:#dc4f72;
     --secondary:#0d5fa8;
@@ -51,6 +61,7 @@ a{
     color:var(--title-color);
     font-size:46px;
     font-weight:700;
+    margin-bottom:0;
 }
 .title p{
     font-size:16px;
@@ -99,6 +110,7 @@ header.fixed-top{
         height: auto !important;;
         padding:15px 0!important;
     }
+
 }
 header.reduce-animate{
     height:70px;
@@ -135,7 +147,7 @@ header .container .nav-bar{
     text-align:center;
 }
 .header .navbar-nav li a{
-    padding:14px 0 !important;
+    padding:0 24px 14px;
     color:var(--title-color);
     text-transform:capitalize;
     transition:all 0.5s ease;
@@ -229,6 +241,13 @@ header .container .nav-bar{
     #primary-menu{
         padding:20px 0;
     }
+    .header .navbar-nav li a{
+        padding:8px 0;
+        text-align:center;
+    }
+    .header .navbar-nav li a::before{
+        bottom:0;
+    }
 }
 @media (min-width:768px){
     .container{
@@ -243,7 +262,11 @@ header .container .nav-bar{
     text-align:center;
 
 }
-
+@media (min-width:992px){
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding:14px 0;
+    }
+}
 /* @media (min-width:992px){
     .navbar-expand-lg .navbar-nav{
         display: flex !important;
@@ -384,6 +407,7 @@ header .container .nav-bar{
     font-size:14px;
     transition:0.5s all;
     transition:0.3s ease-out;
+   
 }
 
 .btn.btn-outline-success:hover
@@ -780,8 +804,7 @@ header .container .nav-bar{
     list-style:none;
     text-align:center;
     background:var(--bg-color);
-    border-color:var(--border-color-light);
-    border-bottom:3px solid;
+    border-bottom:3px solid var(--border-color-light);
 }
 .res-tab-active{
     margin-bottom:-1px !important;
@@ -792,7 +815,7 @@ header .container .nav-bar{
     margin:20px 0 !important    ;
 }
 .res-tab-content{
-    padding:15px 0;
+    padding:15px;
 }
 .res-tab-content img{
     border-radius: var(--card-curve);
@@ -813,6 +836,9 @@ header .container .nav-bar{
     line-height:24.5px;
     font-size:16px;
     color: var(--text-color);
+}
+.product-content .col-6-md{
+    padding:0 15px;
 }
 .product-content .btn{
     margin-top:1rem;
@@ -984,6 +1010,9 @@ header .container .nav-bar{
     color:var(--text-color);
     margin:0;
 }
+.owl-theme .owl-nav.disabled + .owl-dots{
+    margin-top:30px;
+}
 .owl-theme .owl-dots .owl-dot span {
     width:40px;
     height:5px; 
@@ -1039,7 +1068,7 @@ header .container .nav-bar{
     background-repeat:no-repeat;
     background-position:center;
     background-attachment:fixed;
-    min-height:450px;
+    min-height:480px;
     display:grid;
     align-items:center;
     padding:2rem 0;
@@ -1057,9 +1086,7 @@ header .container .nav-bar{
     color:#eee;
     line-height:24.5px;
 }
-.middle-section .btn{
-    margin-top:40px;
-}
+
 .middle-section .btn.btn-outline-success{
    color:#212529;
    background-color:#f8f9fa;
@@ -1129,6 +1156,9 @@ header .container .nav-bar{
     border-radius:var(--card-curve);
     box-shadow:var(--car-box-shadow);
  }
+ .footer .newsletter{
+    padding:0 15px 0 48px;
+ }
  .end-column h4{
     margin-bottom:30px;
     font-weight:500;
@@ -1187,6 +1217,7 @@ header .container .nav-bar{
  .columns-2 .social li {
     display:inline-block;
     margin-right:5px;
+    padding:0;
  }
  .columns-2 .social li a{
     color:var(--title-color);
